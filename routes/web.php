@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'PagesController@home');
+Route::get('/testpage/', 'PagesController@testpage');
 
 Auth::routes();
 

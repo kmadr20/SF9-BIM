@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Ted's homepage
+                    This yo page, bitch!
                 </div>
 
                 <div class="links">

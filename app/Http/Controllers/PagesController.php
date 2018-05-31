@@ -8,9 +8,9 @@ class PagesController extends Controller
 {
     public function home()
     {
-        return view('welcome');
+        return view('home');
     }
-    public function testpage1()
+    public function testpage()
     {
         return view('testpage');
     }
