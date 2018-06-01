@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    This yo page, bitch!
+                    New test
                 </div>
 
                 <div class="links">
