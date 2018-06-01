@@ -14,4 +14,8 @@ class PagesController extends Controller
     {
         return view('testpage');
     }
+    public function createclient()
+    {
+        return view('clients.create');
+    }
 }

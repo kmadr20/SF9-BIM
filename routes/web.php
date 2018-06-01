@@ -12,7 +12,7 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/testpage', 'PagesController@testpage');
+Route::get('/createclient', 'PagesController@createclient');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
