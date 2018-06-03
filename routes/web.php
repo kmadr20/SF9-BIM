@@ -12,8 +12,10 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/createclient', 'PagesController@createclient');
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Client actions
+Route::get('/createclient', 'PagesController@createclient');
+Route::post('/createclient', 'ClientsController@store');
 
 Auth::routes();

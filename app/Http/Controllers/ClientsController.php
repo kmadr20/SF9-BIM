@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
+use App\Http\Requests\ClientFormRequest;
 use Illuminate\Http\Request;
 
 class ClientsController extends Controller
@@ -14,6 +16,7 @@ class ClientsController extends Controller
     public function index()
     {
         //
+        return $request->all();
     }
 
     /**
@@ -32,9 +35,20 @@ class ClientsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClientFormRequest $request)
     {
-        //
+        $client = new Client(array(
+            'freshbooks_id' => $request->get('freshbooks_id'),
+            'teamwork_id' => $request->get('teamwork_id'),
+            'accman_id' => $request->get('accman_id'),
+            'name' => $request->get('name'),
+            'notes' => $request->get('notes'),
+            'tax_exempt' => $request->has('tax_exempt'),
+            'status' => $request->get('status')
+        ));
+
+        $client->save();
+        return redirect('/createclient')->with('status', 'Your ticket has been created!');
     }
 
     /**
