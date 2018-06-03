@@ -16,7 +16,8 @@ class ClientsController extends Controller
     public function index()
     {
         //
-        return $request->all();
+        $clients = Client::all();
+        return view('clients.index', compact('clients'));
     }
 
     /**
@@ -60,6 +61,8 @@ class ClientsController extends Controller
     public function show($id)
     {
         //
+        $client = Client::whereId($id)->firstOrFail();
+        return view('clients.show', compact('client'));
     }
 
     /**
